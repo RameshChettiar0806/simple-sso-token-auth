@@ -128,6 +128,8 @@ This progression follows a security-first methodology, where weaknesses are firs
 
 Separating these concerns allows this repository to remain minimal and conceptually clear, while enabling deeper exploration of real-world IAM challenges in a dedicated extension.
 
+Repository 2 – Attack Analysis and Hardening:
+https://github.com/RameshChettiar0806/secure-sso-trust-audit
 
 ## Documentation
 
