@@ -159,6 +159,61 @@ The linked document is the authoritative technical reference.
 
 ---
 
+## Installation and Setup
+
+This project is intended for educational and experimental use.  
+The following steps describe how to set up and run the project locally.
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Git
+- Virtual environment support (`venv`)
+
+---
+
+### Setup Steps
+
+#### 1. Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/simple_sso_token_auth.git
+cd simple_sso_token_auth
+```
+#### 2. Create and Activate a Virtual Environment
+
+Linux / macOS
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Windows
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+#### 3. Install Dependencies
+If a requirements.txt file is present, install all required packages using:
+```bash
+pip install -r requirements.txt
+```
+Typical dependencies for this project include:
+
+A lightweight web framework (e.g., Flask)
+
+A JWT handling library
+
+A cryptography library for RSA operations
+
+#### 3. Install Dependencies
+Start the Application or Authentication Server using:
+```bash
+python app.py
+```
+The server will start locally and expose endpoints for authentication and token-based authorization.
+
 ## Disclaimer
 
 This repository is educational and foundational in nature.  
