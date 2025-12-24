@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSO Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Single Sign-On Dashboard</h2>
+
+    <div class="section card">
+        <h3>Authentication Status</h3>
+        <p><strong>User:</strong> {{ email }}</p>
+        <p>Authenticated using <strong>Email + OTP</strong></p>
+    </div>
+
+    <hr>
+
+    <div class="section">
+        <h3>Issued JWT</h3>
+        <p class="note">
+            This token represents your authenticated identity and is digitally signed using RSA.
+        </p>
+
+        <div id="jwt-token" class="token-box">
+            {{ token[:50] }}...
+        </div>
+
+        <button onclick="copyToken()">Copy Token (Demo)</button>
+    </div>
+
+    <hr>
+
+    <div class="section">
+        <h3>How SSO Works</h3>
+        <ol>
+            <li>User authenticates once using Email and OTP.</li>
+            <li>Identity Provider issues a signed JWT.</li>
+            <li>JWT is sent with requests as <code>Authorization: Bearer</code>.</li>
+            <li>Services verify the token using the public key.</li>
+            <li>No re-login required across services.</li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <div class="section">
+        <h3>Security Notes</h3>
+        <ul>
+            <li>JWT is signed, not encrypted.</li>
+            <li>Token integrity is verified using RSA public key.</li>
+            <li>Tokens are time-limited.</li>
+            <li>UI shows truncated token by design.</li>
+        </ul>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

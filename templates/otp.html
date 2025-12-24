@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Page Title -->
+    <h2>One-Time Password Verification</h2>
+
+    <p class="note">
+        This step verifies that you are the legitimate owner of the provided email address.
+        Successful verification completes authentication and allows SSO access.
+    </p>
+
+    <hr>
+
+    <!-- Explanation Card -->
+    <div class="section card">
+        <h3>Why OTP Verification?</h3>
+        <ul>
+            <li>Prevents unauthorized access</li>
+            <li>Adds a second authentication factor</li>
+            <li>Ensures identity before issuing a JWT</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- OTP Form -->
+    <div class="section">
+        <h3>Enter OTP</h3>
+
+        <form action="/otp" method="post">
+            <label for="otp"><strong>6-Digit OTP</strong></label><br><br>
+
+            <input
+                type="text"
+                id="otp"
+                name="otp"
+                placeholder="Enter OTP"
+                required
+                maxlength="6"
+                style="width: 100%; padding: 10px; font-size: 1em;"
+            >
+
+            <br><br>
+
+            <button type="submit">Verify OTP</button>
+        </form>
+
+        <p class="note" style="margin-top: 15px;">
+            OTPs are valid for a single use and expire automatically.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

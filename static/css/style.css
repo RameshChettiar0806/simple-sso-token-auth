@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+h2, h3 {
+    color: #1f2937;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 25px 0;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #f9fafb;
+    padding: 15px;
+    border-left: 4px solid #2563eb;
+    border-radius: 4px;
+}
+
+.token-box {
+    font-family: monospace;
+    background: #111827;
+    color: #d1d5db;
+    padding: 12px;
+    border-radius: 4px;
+    word-break: break-all;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+.note {
+    font-size: 0.9em;
+    color: #374151;
+}
+
+input[type="email"] {
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+}
+
+input[type="email"]:focus {
+    outline: none;
+    border-color: #2563eb;
+}

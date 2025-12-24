@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple SSO System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Project Title -->
+    <h2>Simple Single Sign-On (SSO) System</h2>
+
+    <p class="note">
+        This project demonstrates a backend-focused authentication system using
+        Email + OTP, JWT, and RSA-based digital signatures to enable secure
+        Single Sign-On across services.
+    </p>
+
+    <hr>
+
+    <!-- Instructions -->
+    <div class="section card">
+        <h3>How Authentication Works</h3>
+        <ol>
+            <li>Enter your email address.</li>
+            <li>Verify using a one-time password (OTP).</li>
+            <li>Receive a signed JWT for SSO access.</li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <!-- Login Form -->
+    <div class="section">
+        <h3>Login</h3>
+
+        <form action="/login" method="post">
+            <label for="email"><strong>Email Address</strong></label><br><br>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="user@example.com"
+                required
+                style="width: 100%; padding: 10px; font-size: 1em;"
+            >
+
+            <br><br>
+
+            <button type="submit">Continue</button>
+        </form>
+
+        <p class="note" style="margin-top: 15px;">
+            No password is required. Authentication is completed using a secure OTP.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
