@@ -178,7 +178,7 @@ The following steps describe how to set up and run the project locally.
 
 ```bash
 git clone https://github.com/RameshChettiar0806/simple_sso_token_auth.git
-cd simple_sso_token_auth
+cd simple-sso-token-auth
 ```
 #### 2. Create and Activate a Virtual Environment
 
